@@ -1,0 +1,12 @@
+{
+  "name": "MySite",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "express": "3.0.0alpha4",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*"
+  },
+  "main": "app.js"
+}
