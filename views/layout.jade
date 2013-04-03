@@ -1,15 +1,24 @@
 !!!5
 html
-  head
-    title #{title} - My Site
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    header
-      h1 My Site
-    .container
-      .main-content
-        block content
-      .sidebar
-        block sidebar
-    footer
-      p Running on node with Express, Jade and Stylus
+	head
+		title #{title} - David Crowley
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		header
+			h1
+				span(data-shadow-text="David Crowley") David Crowley
+			p.byline Interaction designer, charmed by simplicity in digital interactions
+		#container
+			#content
+				block content
+
+// FUTURE STUFF
+//				block tumblr
+//				block work
+//			#sidebar
+//				block contact
+//				block twitter
+//				block youtube
+//				block github
+//		footer
+//			p Running on node with Express, Jade and Stylus

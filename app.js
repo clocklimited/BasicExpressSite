@@ -16,6 +16,9 @@ function compile(str, path) {
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
+app.set('view options', 
+  { layout: false}
+)
 app.use(express.logger('dev'))
 app.use(stylus.middleware(
   { src: __dirname + '/public'
@@ -29,5 +32,12 @@ app.get('/', function (req, res) {
   { title : 'Home' }
   )
 })
+
+app.get('/work', function(req, res) {
+    res.render('work', { 
+        title : 'Work',
+        cssID : 'pageWork'
+    });
+});
 
 app.listen(3000)

@@ -1,93 +1,147 @@
-/*
- * Import nib
- */
 @import 'nib'
+@import url('http://fonts.googleapis.com/css?family=Raleway:600,900')
+@import url('http://fonts.googleapis.com/css?family=Arvo')
+@import url('http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic')
 
-/*
- * Grab a custom font from Google
- */
-@import url('http://fonts.googleapis.com/css?family=Quicksand')
-
-/*
- * Nib provides a CSS reset
- */
 global-reset()
 
-/*
- * Store the main color and
- * background color as variables
- */
-main-color = #fa5b4d
-background-color = #faf9f0
+/* =Variables */
+colorBackground = #faf9f0
+colorLink = #00a6cd
+colorHeader = #333
+colorMain = #fa5b4d
+fontBody = 'Noto Sans', Georgia, sans-serif
+fontAlt = Arvo, Georgia, sans-serif
 
-body
-  font-family 'Georgia'
-  background-color background-color
-  color #444
 
-header
-  font-family 'Quicksand'
-  padding 50px 10px
-  color #fff
-  font-size 25px
-  text-align center
-
-  /*
-   * Note the use of the `main-color`
-   * variable and the `darken` function
-   */
-  background-color main-color
-  border-bottom 1px solid darken(main-color, 30%)
-  text-shadow 0px -1px 0px darken(main-color, 30%)
-
-.container
-  width 500px
-  margin 50px auto
-  overflow hidden
-
-.main-content
-  float left
-  width 300px
-
-  p
-    margin-bottom 20px
-
-.sidebar
-  float left
-  width 200px
-
-  .widget
-
-    /*
-     * Note the lack of vendor
-     * prefixes here. Nib will
-     * add them for us
-     */
-    border-radius 3px
-    border 1px solid #ccc
-    margin-left 20px
-    background-color background-color
-    box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
-
-    h1
-      font-family 'Quicksand'
-      margin 13px 10px 4px
-      padding-bottom 10px
-      border-bottom 1px dotted #ddd
-      border-radius 2px 2px 0px 0px
-      margin-bottom 10px
-
-    p
-      font-size 13px
-      padding 0px 10px
-      margin-bottom 10px
+/* =Text */
+a
+	color colorLink
+	&:hover
+		color darken(colorLink, 30%)
+p, h1, h2, h3, h4, h5, h6
+	margin-bottom 1em
 
 p
-  line-height 1.8
+.list li
+	line-height: 140%
+	&:last-child
+		margin-bottom 3em
+
+.list li
+	margin-bottom 1em
+
+.small
+	font-size: 80%;
+
+/* =Structure */
+body
+	font-family fontBody
+	background-color colorBackground
+	color #444
+
+header
+	background-color colorHeader
+	border-bottom 1px solid darken(colorHeader, 30%)
+	padding-left 100px
+	text-shadow 0px -1px 0px darken(colorHeader, 30%)
+	h1
+		font: 600 1.5em/1 'Raleway', sans-serif
+		color: rgba(0,0,0,.5)
+		letter-spacing: .5em
+		margin 0
+		span
+			font-size: 4em
+			z-index: 100
+			text-shadow: .04em .04em 0 #9cb8b3
+		span,
+		span:after
+			font-weight: 900
+			color: #efedce
+			white-space: nowrap
+			display: inline-block
+			position: relative
+			letter-spacing: .1em
+			padding: .2em 0 .25em 0
+		span:after
+			content: attr(data-shadow-text)
+			color: rgba(255,255,255,.15)
+			text-shadow: none
+			position: absolute
+			left: .0875em
+			top: .0875em
+			z-index: -1;
+			-webkit-mask-image: url(http://f.cl.ly/items/1t1C0W3y040g1J172r3h/mask.png)
+	.byline
+		color rgba(255,255,255,.3)
+		font-family Arvo
+		padding-left 5px
+		margin-bottom 20px
+
+#container
+	padding-left 100px
+	padding-right 100px
+
+#contact
+	ul
+		li
+			font-size 250%
+			font-weight 700
+			line-height 200%
+			a
+				color colorHeader
+				text-decoration none
+			a:hover
+				color #9cb8b3
+				text-shadow #fff -1px -1px 0;
+
+#content
+	clear both
+	float left
+	padding-top 20px
+	h2
+		background rgba(0,0,0,.2)
+		clear both
+		font-family fontAlt
+		font-size 180%
+		font-weight 700
+		padding .5em
+	h3
+		clear both
+		font-size: 140%
+		font-weight 700
 
 footer
-  width 500px
-  margin 50px auto
-  border-top 1px dotted #ccc
-  padding-top 5px
-  font-size 13px
+	width 500px
+	margin 50px auto
+	border-top 1px dotted #ccc
+	padding-top 5px
+	font-size 13px
+
+/* =Utilities */
+.one-half
+	width 49%
+.one-third
+	width 33%
+.two-thirds
+	width 66%
+
+.left
+	float left
+.right
+	float right
+
+img.thumb
+iframe.thumb
+	float right
+	margin-bottom 4em
+	margin-left 2em
+	max-width 62%
+	&.small
+		max-width 30%
+
+.nowrap
+	white-space nowrap
+
+.subtle
+	opacity .75

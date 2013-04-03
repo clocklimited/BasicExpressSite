@@ -1,27 +1,42 @@
-extend layout
+extends layout
+
+block contact
+	#contact
+		ul.list
+			li
+				a(href="mailto:david@slantback.net") david@slantback.net
+			li
+				a(href="http://slantback.tumblr.com") slantback.tumblr.com
+			li
+				a(href="http://twitter.com/mrdcrowley") twitter.com/mrdcrowley
 
 block content
-  p
-    | Vivamus hendrerit arcu sed erat molestie
-    | vehicula. Sed auctor neque eu tellus
-    | rhoncus ut eleifend nibh porttitor. Ut in.
-    
-  p
-    | Donec congue lacinia dui, a porttitor
-    | lectus condimentum laoreet. Nunc eu
-    | ullamcorper orci. Quisque eget odio ac
-    | lectus vestibulum faucibus eget in metus.
-    | In pellentesque faucibus vestibulum. Nulla
-    | at nulla justo, eget luctus tortor.
+	#contact
+		ul
+			li
+				a(href="mailto:david@slantback.net") david@slantback.net
+			li
+				a(href="http://twitter.com/mrdcrowley") @mrdcrowley
+			li
+				a(href="http://slantback.tumblr.com/") tumblr
+			li
+				a(href="https://github.com/mrdcrowley?tab=repositories") GitHub
+			li
+				a(href="http://www.youtube.com/user/slantback/videos") Youtube
 
-block sidebar
-  .widget
-    h1 Widget
-    p
-      | Sed auctor neque eu tellus rhoncus ut
-      | eleifend nibh porttitor. Ut in nulla enim.
-    
-    p
-      | Vivamus hendrerit arcu sed erat molestie
-      | vehicula.
+block tumblr
+	h2 Tumblr
+	h3 Rusty
+	p
+		| In a world where kids my age are popping mollies with leather
+		| Sitting on Tumblr, never outside or enjoying the weather
+		| Can name a sweater, but not a talent or don't know if whether
+		| Or not they got one, tried to change their life for the better
+		| I was a drama club kid, I'd run with a fun dip, my nuts itched
+		| I was defiant, always said, "Fuck shit"
+
+block twitter
+	p
+		| Vivamus hendrerit arcu sed erat molestie
+		| vehicula.
 
