@@ -1,6 +1,13 @@
-@import url("http://fonts.googleapis.com/css?family=Raleway:600,900");
-@import url("http://fonts.googleapis.com/css?family=Arvo");
-@import url("http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic");
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+@import url("http://fonts.googleapis.com/css?family=Quicksand");
+/*
+ * Nib provides a CSS reset
+ */
 html,
 body,
 div,
@@ -92,120 +99,80 @@ td {
 a img {
   border: none;
 }
-/* =Variables */
-/* =Text */
-a {
-  color: #00a6cd;
-}
-a:hover {
-  color: #007490;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 1em;
-}
-p,
-.list li {
-  line-height: 140%;
-}
-p:last-child,
-.list li:last-child {
-  margin-bottom: 3em;
-}
-.list li {
-  margin-bottom: 1em;
-}
-.small {
-  font-size: 80%;
-}
-/* =Structure */
+/*
+ * Store the main color and
+ * background color as variables
+ */
 body {
-  font-family: 'Noto Sans', Georgia, sans-serif;
+  font-family: 'Georgia';
   background-color: #faf9f0;
   color: #444;
 }
 header {
-  background-color: #333;
-  border-bottom: 1px solid #242424;
-  padding-left: 100px;
-  text-shadow: 0px -1px 0px #242424;
+  font-family: 'Quicksand';
+  padding: 50px 10px;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+/*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color: #fa5b4d;
+  border-bottom: 1px solid #df1806;
+  text-shadow: 0px -1px 0px #df1806;
 }
-header h1 {
-  font: 600 1.5em/1 'Raleway', sans-serif;
-  color: rgba(0,0,0,0.5);
-  letter-spacing: 0.5em;
-  margin: 0;
+.container {
+  width: 500px;
+  margin: 50px auto;
+  overflow: hidden;
 }
-header h1 span {
-  font-size: 4em;
-  z-index: 100;
-  text-shadow: 0.04em 0.04em 0 #9cb8b3;
+.main-content {
+  float: left;
+  width: 300px;
 }
-header h1 span,
-header h1 span:after {
-  font-weight: 900;
-  color: #efedce;
-  white-space: nowrap;
-  display: inline-block;
-  position: relative;
-  letter-spacing: 0.1em;
-  padding: 0.2em 0 0.25em 0;
-}
-header h1 span:after {
-  content: attr(data-shadow-text);
-  color: rgba(255,255,255,0.15);
-  text-shadow: none;
-  position: absolute;
-  left: 0.0875em;
-  top: 0.0875em;
-  z-index: -1;
-  -webkit-mask-image: url("http://f.cl.ly/items/1t1C0W3y040g1J172r3h/mask.png");
-}
-header .byline {
-  color: rgba(255,255,255,0.3);
-  font-family: Arvo;
-  padding-left: 5px;
+.main-content p {
   margin-bottom: 20px;
 }
-#container {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-#contact ul li {
-  font-size: 250%;
-  font-weight: 700;
-  line-height: 200%;
-}
-#contact ul li a {
-  color: #333;
-  text-decoration: none;
-}
-#contact ul li a:hover {
-  color: #9cb8b3;
-  text-shadow: #fff -1px -1px 0;
-}
-#content {
-  clear: both;
+.sidebar {
   float: left;
-  padding-top: 20px;
+  width: 200px;
 }
-#content h2 {
-  background: rgba(0,0,0,0.2);
-  clear: both;
-  font-family: Arvo, Georgia, sans-serif;
-  font-size: 180%;
-  font-weight: 700;
-  padding: 0.5em;
+.sidebar .widget {
+/*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  background-color: #faf9f0;
+  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
 }
-#content h3 {
-  clear: both;
-  font-size: 140%;
-  font-weight: 700;
+.sidebar .widget h1 {
+  font-family: 'Quicksand';
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  -webkit-border-radius: 2px 2px 0px 0px;
+  border-radius: 2px 2px 0px 0px;
+  margin-bottom: 10px;
+}
+.sidebar .widget p {
+  font-size: 13px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+p {
+  line-height: 1.8;
+}
+#video {
+  margin: 50px auto;
+  width: 800px;
+  height: 400px;
 }
 footer {
   width: 500px;
@@ -213,39 +180,4 @@ footer {
   border-top: 1px dotted #ccc;
   padding-top: 5px;
   font-size: 13px;
-}
-/* =Utilities */
-.one-half {
-  width: 49%;
-}
-.one-third {
-  width: 33%;
-}
-.two-thirds {
-  width: 66%;
-}
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
-img.thumb,
-iframe.thumb {
-  float: right;
-  margin-bottom: 4em;
-  margin-left: 2em;
-  max-width: 62%;
-}
-img.thumb.small,
-iframe.thumb.small {
-  max-width: 30%;
-}
-.nowrap {
-  white-space: nowrap;
-}
-.subtle {
-  opacity: 0.75;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-  filter: alpha(opacity=75);
 }
