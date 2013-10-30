@@ -169,6 +169,11 @@ header {
 p {
   line-height: 1.8;
 }
+#video {
+  margin: 50px auto;
+  width: 800px;
+  height: 400px;
+}
 footer {
   width: 500px;
   margin: 50px auto;
