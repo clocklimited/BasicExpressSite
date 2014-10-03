@@ -2,11 +2,11 @@
   "name": "MySite",
   "version": "0.0.1",
   "private": "true",
+  "main": "app.js",
   "dependencies": {
     "express": "3.0.0alpha4",
-    "jade": "*",
-    "stylus": "*",
-    "nib": "*"
-  },
-  "main": "app.js"
+    "nib": "^1.0.4",
+    "stylus": "^0.49.1",
+    "jade": "^1.7.0"
+  }
 }
