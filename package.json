@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "express": "3.0.0alpha4",
+    "express-log": "^1.0.1",
     "nib": "^1.0.4",
     "stylus": "^0.49.1",
     "jade": "^1.7.0"
