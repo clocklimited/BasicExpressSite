@@ -1,6 +1,8 @@
 Basic Express Site
 ==================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/BasicExpressSite.svg)](https://greenkeeper.io/)
+
 Source code example for [A simple website in node.js with express, jade and stylus](http://www.clock.co.uk/blog/a-simple-website-in-nodejs-with-express-jade-and-stylus) article.
 
 Build
