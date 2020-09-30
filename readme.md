@@ -1,3 +1,4 @@
+Logr - An Amazing Project
 Basic Express Site
 ==================
 
