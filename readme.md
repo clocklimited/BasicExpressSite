@@ -17,7 +17,7 @@ All dependencies will be downloaded by `npm` to `node_modules` folder.
 Run
 ---
 
-Run this command in console:
+Run this command in console and enjoy application:
 
 ```
 node app.js
